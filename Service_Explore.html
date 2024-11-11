@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service & Explore</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+         /* Additional styling for smooth slider transition */
+         .slider {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            height: 350px;
+            margin-top: 2px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            border-radius: 28px;
+            padding: 20px;
+        }
+        .slides {
+            display: flex;
+            gap: 20px;
+            scroll-behavior: smooth;
+            background-color:rgb(1, 41, 41);
+            border-radius: 18px;
+            padding: 6px;
+            border-radius: 8px;
+            transition: transform 0.4s ease-in-out;
+        }
+        .slide {
+            min-width: 100%;
+            height: 530px;
+            background-size: cover;
+            background-position: center;
+        }
+        /* Explorer Section Styling */
+        .explorer-slider {
+            display: flex;
+            overflow-x: auto;
+            gap: 17px;
+            scroll-behavior: smooth;
+            background-color:rgb(249, 255, 255);
+            border-radius: 18px;
+        }
+        .explorer-card {
+            min-width: 250px;
+            max-width: 250px;
+            height: 420px;
+            padding: 6px;
+            background-color: #d7f0e8;
+            border-radius: 18px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2px;
+        }
+        .explorer-card img {
+            padding: 2px;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        .explorer-card .content {
+            padding: 16px;
+        }
+
+        /* Slider Arrows */
+        .arrow-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 12px;
+            border: none;
+            cursor: pointer;
+            z-index: 10;
+        }
+        .left-arrow {
+            left: 10px;
+        }
+        .right-arrow {
+            right: 10px;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Image Slider Section -->
+    <!-- Image Slider Section -->
+    <div class="slider mt-8">
+        <div id="sliderImages" class="slides">
+            <div class="slide" style="background-image: url('pic1.jpg');"></div>
+            <div class="slide" style="background-image: url('pic4.png');"></div>
+            <div class="slide" style="background-image: url('pic5.png');"></div>
+            <div class="slide" style="background-image: url('pic6.png');"></div>
+            <div class="slide" style="background-image: url('pic7.png');"></div>
+            <div class="slide" style="background-image: url('pic8.png');"></div>
+        </div>
+    </div>
+
+    <!-- Explorer Section with Card Slider -->
+    <section class="mt-16 px-6 py-12">
+        <h2 class="text-3xl font-bold text-center text-green-600 mb-6">Explore the Best Attractions</h2>
+        <div class="relative">
+            <!-- Card Slider -->
+             
+            <div class="explorer-slider" id="explorerSlider">
+                <div class="explorer-card">
+                    <img src="pic 231617.png" alt="Attraction 1">
+                    <div class="content">
+                        <h3 class="font-bold text-lg">Buxa Jayanti in Dooars</h3>
+                        <p>Jayanti is a small forest mountain village at the fringe of the Buxa forest,  which forms a natural border with the Bhutan hills. </p>
+                        <p class="text-green-500"><a href="" target="_blank">Location</a></p>
+                    </div>
+                </div>
+                <div class="explorer-card">
+                    <img src="pic4.png" alt="Attraction 4">
+                    <div class="content">
+                        <h3 class="font-bold text-lg">beautiful Remote Village Lepchakha</h3>
+                        <p>Lepchakha is located close to Bhutan at an aerial distance of 2-3km. Lepchakha is a hidden gem often called the heaven of Dooars.</p>
+                        <p class="text-green-500"><a href="https://maps.app.goo.gl/abggzYWqooVTrtoP7" target="_blank">Location</a></p>
+                    </div>
+                </div>
+                <div class="explorer-card">
+                    <img src="pic 231905.png" alt="Attraction 2">
+                    <div class="content">
+                        <h3 class="font-bold text-lg"> Historic Buxa Fort</h3>
+                        <p>Buxa Fort in Dooars, West Bengal, is a historic site that once guarded against invasions and later held freedom fighters as a British prison.</p>
+                        <p class="text-green-500"><a href="https://maps.app.goo.gl/g5y5f4UJ9kykYiJa6" target="_blank">Location</a></p>
+                    </div>
+                </div>
+                <div class="explorer-card">
+                    <img src="pic 232141.png" alt="Attraction 3">
+                    <div class="content">
+                        <h3 class="font-bold text-lg">Buxa Mountain</h3>
+                        <p>Buxa Mountain in Dooars offers breathtaking views, dense forests, and rich wildlife, making it a paradise for nature lovers.</p>
+                        <p class="text-green-500"><a href="https://maps.app.goo.gl/CyqBHobV4Sx8Ep5G9" target="_blank">Location</a></p>
+                    </div>
+                </div>
+                <div class="explorer-card">
+                    <img src="pic 232636.png" alt="Attraction 4">
+                    <div class="content">
+                        <h3 class="font-bold text-lg">Jaldapara National Park</h3>
+                        <p>Jaldapara Forest in Dooars offers thrilling safaris through lush landscapes, where you can spot elephants, rhinos, and diverse wildlife.</p>
+                        <p class="text-green-500"><a href="https://maps.app.goo.gl/hzQiC6Co5V76qqN8A" target="_blank">Location</a></p>
+                    </div>
+                </div>
+                <div class="explorer-card">
+                    <img src="pic 232929.png" alt="Attraction 4">
+                    <div class="content">
+                        <h3 class="font-bold text-lg">Bhutan Ghat- Indo-Bhutan Border, Dooars</h3>
+                        <p>Bhutan Ghat, on the Indo-Bhutan border in Dooars, offers serene riversides and scenic mountain views.</p>
+                        <p class="text-green-500"><a href="https://maps.app.goo.gl/hCyjDxkWekmjKaH99" target="_blank">Location</a></p>
+                    </div>
+                </div>
+                <div class="explorer-card">
+                    <img src="pic 233112.png" alt="Attraction 4">
+                    <div class="content">
+                        <h3 class="font-bold text-lg">Dooars-Terai tea gardens</h3>
+                        <p>The Dooars Terai tea gardens offer scenic beauty and rich history, with lush plantations established during the British colonial era..</p>
+                        <p class="text-green-500"><a href="https://maps.app.goo.gl/ye8g4r6cCKtD5phY9" target="_blank">Location</a></p>
+                    </div>
+                </div>
+
+                <div class="explorer-card">
+                    <img src="pic6.png" alt="Attraction 4">
+                    <div class="content">
+                        <h3 class="font-bold text-lg">RajaBhatKhawa*
+                        </h3>
+                        <p>Rajabhatkhawa in Dooars is known for historic battles, where Bhutanese and Cooch Behar kings fought and set up camps.</p>
+                        <p class="text-green-500"><a href="https://maps.app.goo.gl/MFEEdeJDYzH5QDhH6" target="_blank">Location</a></p>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- Left Arrow Button -->
+            <button class="arrow-btn left-arrow" onclick="moveSlider(-1)">&#10094;</button>
+            <!-- Right Arrow Button -->
+            <button class="arrow-btn right-arrow" onclick="moveSlider(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="px-6 py-12 bg-gray-100">
+        <h2 class="text-2xl font-bold text-green-500 mb-6 text-center">Services Provided by the Hotel</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center">
+            <ul class="list-disc list-inside space-y-2 text-center">
+                <li class="text-gray-700"><span class="text-green-500 font-bold">✔</span> westten washroom with water gesture</li>
+                <li class="text-gray-700"><span class="text-green-500 font-bold">✔</span> 24/7 Room Service</li>
+                <li class="text-gray-700"><span class="text-green-500 font-bold">✔</span> Parking</li>
+                <li class="text-gray-700"><span class="text-green-500 font-bold">✔</span> Complimentary Breakfast</li>
+                <li class="text-gray-700"><span class="text-green-500 font-bold">✔</span> Garden </li>
+                <li class="text-gray-700"><span class="text-green-500 font-bold">✔</span> Mountain Views Tea Corner</li>
+            </ul>
+            <ul class="list-disc list-inside space-y-2 text-center">
+                <li class="text-gray-700"><span class="text-green-500 font-bold">✔</span> Guided Tours</li>
+                <li class="text-gray-700"><span class="text-green-500 font-bold">✔</span> Local Food or Any Indian Food</li>
+                <li class="text-gray-700"><span class="text-green-500 font-bold">✔</span> Car Rental Service</li>
+                <li class="text-gray-700"><span class="text-green-500 font-bold">✔</span> Laundry Service</li>
+                <li class="text-gray-700"><span class="text-green-500 font-bold">✔</span>  AC/ Fan</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- JavaScript for Slider -->
+    <script>
+                // Slider functionality
+                let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showNextSlide() {
+            slides[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % slides.length;
+            document.getElementById('sliderImages').style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        setInterval(showNextSlide, 2000); // Change image every 3 seconds
+
+        // Explorer Card Slider Functionality
+        function moveSlider(direction) {
+            const slider = document.getElementById('explorerSlider');
+            const cardWidth = document.querySelector('.explorer-card').offsetWidth;
+            const currentScroll = slider.scrollLeft;
+
+            slider.scrollLeft = currentScroll + (direction * cardWidth);
+        }
+    </script>
+
+</body>
+</html>
